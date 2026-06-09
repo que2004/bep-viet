@@ -1,0 +1,127 @@
+.oh-page { background: var(--surface); }
+
+/* ─── Header ──────────────────────────────────────────────── */
+.oh-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 28px; flex-wrap: wrap; gap: 16px;
+}
+.oh-title {
+  font-family: var(--font-display); font-size: 28px; font-weight: 900;
+  background: var(--grad-btn); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 4px;
+}
+.oh-sub { font-size: 14px; color: var(--text-muted); font-weight: 600; }
+
+/* ─── Filter tabs ─────────────────────────────────────────── */
+.oh-filters {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;
+}
+.oh-filter-btn {
+  padding: 8px 18px; border-radius: 99px; border: 2px solid var(--border);
+  background: var(--white); font-size: 13px; font-weight: 700;
+  cursor: pointer; transition: var(--transition); font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+.oh-filter-btn:hover { border-color: var(--pink); color: var(--pink); background: var(--pink-pale); }
+.oh-filter-btn.active { background: var(--grad-btn); border-color: transparent; color: var(--white); }
+
+/* ─── Order cards ─────────────────────────────────────────── */
+.oh-list { display: flex; flex-direction: column; gap: 12px; }
+
+.oh-card {
+  background: var(--white); border-radius: var(--radius-lg);
+  border: 2px solid var(--border-light); overflow: hidden;
+  transition: var(--transition);
+}
+.oh-card:hover { border-color: var(--pink-pale); box-shadow: var(--shadow-sm); }
+
+.oh-card__top {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 20px; cursor: pointer; gap: 16px;
+}
+.oh-card__left { flex: 1; min-width: 0; }
+.oh-card__num  { font-family: var(--font-display); font-size: 16px; font-weight: 900; color: var(--text-primary); margin-bottom: 4px; }
+.oh-card__meta { font-size: 12px; color: var(--text-muted); font-weight: 600; display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.oh-dot        { opacity: 0.4; }
+
+.oh-card__items-preview { display: flex; flex-wrap: wrap; gap: 6px; }
+.oh-item-chip {
+  background: var(--cream); color: var(--text-secondary);
+  padding: 3px 10px; border-radius: 99px; font-size: 11px; font-weight: 700;
+  white-space: nowrap;
+}
+.oh-item-chip--more { background: var(--pink-pale); color: var(--pink-dark); }
+
+.oh-card__right {
+  display: flex; flex-direction: column; align-items: flex-end;
+  gap: 6px; flex-shrink: 0;
+}
+.oh-status-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 12px; border-radius: 99px;
+  font-size: 12px; font-weight: 800; white-space: nowrap;
+}
+.oh-total   { font-size: 16px; font-weight: 900; color: var(--pink-dark); }
+.oh-chevron { font-size: 10px; color: var(--text-muted); }
+
+/* ─── Expanded detail ─────────────────────────────────────── */
+.oh-card__detail {
+  border-top: 2px solid var(--border-light);
+  padding: 20px; display: flex; flex-direction: column; gap: 16px;
+  animation: fadeIn 0.2s ease;
+}
+.oh-detail-title { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 10px; }
+.oh-detail-items { display: flex; flex-direction: column; gap: 10px; }
+.oh-detail-item  { display: flex; align-items: center; gap: 12px; }
+.oh-detail-img   { width: 44px; height: 44px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; border: 1.5px solid var(--border-light); }
+.oh-detail-item-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.oh-detail-item-name { font-size: 14px; font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.oh-detail-item-qty  { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+.oh-detail-item-price { font-size: 14px; font-weight: 800; color: var(--pink-dark); flex-shrink: 0; }
+
+.oh-detail-summary { background: var(--cream); border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.oh-summary-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-secondary); font-weight: 600; }
+.oh-summary-row--total { font-size: 15px; font-weight: 900; color: var(--text-primary); padding-top: 8px; border-top: 1.5px solid var(--border); margin-top: 2px; }
+
+.oh-detail-info { display: flex; flex-direction: column; gap: 8px; }
+.oh-detail-info-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+.oh-detail-info-row span:first-child { color: var(--text-muted); font-weight: 600; flex-shrink: 0; }
+.oh-detail-info-row span:last-child  { font-weight: 700; color: var(--text-secondary); text-align: right; }
+
+.oh-detail-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.oh-cancel-hint { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+
+/* ─── Pagination ──────────────────────────────────────────── */
+.oh-pagination { display: flex; justify-content: center; gap: 8px; margin-top: 32px; }
+.oh-page-btn {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 2px solid var(--border); background: var(--white);
+  font-size: 13px; font-weight: 800; cursor: pointer;
+  transition: var(--transition); color: var(--text-secondary);
+  font-family: var(--font-body);
+}
+.oh-page-btn:hover { border-color: var(--pink); color: var(--pink); }
+.oh-page-btn.active { background: var(--grad-btn); border-color: transparent; color: var(--white); }
+
+@media (max-width: 600px) {
+  .oh-card__top { flex-direction: column; align-items: flex-start; }
+  .oh-card__right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+}
+
+/* ── OrderHistoryPage Responsive Improvements ───────────── */
+@media (max-width: 768px) {
+  .oh-title { font-size: 22px; }
+  .oh-card__top { padding: 14px 16px; }
+  .oh-card__detail { padding: 14px 16px; }
+  .oh-filters { gap: 6px; }
+  .oh-filter-btn { padding: 6px 14px; font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .oh-title { font-size: 20px; }
+  .oh-card__num { font-size: 14px; }
+  .oh-total { font-size: 14px; }
+  .oh-detail-actions { flex-direction: column; }
+  .oh-detail-actions .btn { width: 100%; justify-content: center; }
+}

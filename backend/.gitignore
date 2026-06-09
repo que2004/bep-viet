@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Environment variables — KHÔNG commit file này lên GitHub!
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store

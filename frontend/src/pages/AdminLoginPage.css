@@ -1,0 +1,28 @@
+.admin-login { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 24px; }
+.admin-login__bg {
+  position: fixed; inset: 0; z-index: 0;
+  background: linear-gradient(135deg, #1A0830 0%, #3D0F5A 50%, #0D3B2E 100%);
+}
+.admin-login__bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(255,78,142,0.15) 0%, transparent 60%),
+    radial-gradient(circle at 70% 20%, rgba(0,196,140,0.1) 0%, transparent 40%);
+}
+.admin-login__card { position: relative; z-index: 1; background: var(--white); border-radius: var(--radius-xl); padding: 48px 40px; width: 100%; max-width: 420px; box-shadow: 0 40px 100px rgba(0,0,0,0.35); }
+.admin-login__logo { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 2px solid var(--border-light); }
+.admin-login__logo-icon { font-size: 40px; }
+.admin-login__brand { font-family: var(--font-display); font-size: 22px; background: var(--grad-btn); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; }
+.admin-login__sub { font-size: 12px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; }
+.admin-login__title { font-family: var(--font-display); font-size: 28px; color: var(--text-primary); margin-bottom: 6px; font-weight: 900; }
+.admin-login__desc { font-size: 14px; color: var(--text-muted); margin-bottom: 28px; font-weight: 600; }
+.admin-login__form { display: flex; flex-direction: column; gap: 16px; }
+.admin-login__hint { margin-top: 20px; padding: 12px 16px; background: var(--cream); border-radius: var(--radius-sm); font-size: 12px; color: var(--text-muted); text-align: center; font-weight: 600; }
+.admin-login__hint code { background: var(--border); padding: 1px 6px; border-radius: 6px; font-family: monospace; color: var(--text-primary); font-weight: 700; }
+.admin-login__back { display: block; text-align: center; margin-top: 20px; font-size: 13px; color: var(--text-muted); transition: var(--transition); font-weight: 700; }
+.admin-login__back:hover { color: var(--pink); }
+
+/* ── AdminLoginPage Responsive ───────────────────────────── */
+@media (max-width: 480px) {
+  .admin-login-card { padding: 24px 16px; margin: 16px; }
+  .admin-login-title { font-size: 20px; }
+}

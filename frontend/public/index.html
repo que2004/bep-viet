@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FF4E8E" />
+    <meta name="description" content="Bếp Việt – Đặt đồ ăn online, hương vị truyền thống Việt Nam" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bếp Việt – Hương vị quê hương" />
+    <meta property="og:description" content="Đặt món ăn Việt Nam truyền thống trực tuyến" />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Bếp Việt – Hương vị quê hương</title>
+
+    <style>
+      /* Prevent flash of unstyled content */
+      body {
+        margin: 0;
+        background-color: #FAFBFF;
+        font-family: 'Quicksand', sans-serif;
+      }
+      /* Loading screen while React loads */
+      #root:empty::after {
+        content: '🍜';
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 48px;
+        animation: pulse 1.2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        50% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.85); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>Bạn cần bật JavaScript để chạy ứng dụng này.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
