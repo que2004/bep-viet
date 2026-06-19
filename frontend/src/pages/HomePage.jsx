@@ -283,7 +283,7 @@ export default function HomePage() {
         <div className="container story-section__inner">
           <div className="story-section__image-wrap">
             <img
-              src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=500&fit=crop"
+              src="https://www.bepxuadanang.com/wp-content/uploads/3105169131323974362139747424887302820006012n-900x900.jpg"
               alt="Bếp nhà hàng"
               className="story-section__image"
             />
