@@ -92,7 +92,7 @@ export default function ChatWidget() {
 
     try {
       const res = await fetch(
-        `${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/chat`,
+        `${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/chat`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
